@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Indriya</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+    <style>
+
+    input[type=submit] {
+            opacity: 1.0;
+            border: 2px solid #2b90d9;
+            color: #2b90d9;
+            &:hover,
+            &.-active {
+                background: #2b90d9;
+                border: 2px solid #000000;
+                color: white;
+            }
+        }
+
+        img.bg {
+            /* Set rules to fill background */
+            min-height: 100%;
+            min-width: 1024px;
+            /* Set up proportionate scaling */
+            width: 100%;
+            height: auto;
+            /* Set up positioning */
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        @media screen and (max-width: 1024px) {
+            img.bg {
+                left: 50%;
+                margin-left: -512px;
+            }
+        }
+        /* centered columns styles */
+
+        .row-centered {
+            text-align: center;
+        }
+
+        .col-centered {
+            display: inline-block;
+            float: none;
+            /* reset the text-align */
+            text-align: left;
+            /* inline-block space fix */
+            margin-right: -4px;
+        }
+
+        .col-fixed {
+            /* custom width */
+            width: 320px;
+        }
+
+        .col-min {
+            /* custom min width */
+            min-width: 320px;
+        }
+
+        .col-max {
+            /* custom max width */
+            max-width: 320px;
+        }
+        /* visual styles */
+
+        body {
+            padding-bottom: 40px;
+        }
+
+        h1 {
+            margin: 40px 0px 20px 0px;
+            color: #95c500;
+            font-size: 28px;
+            line-height: 34px;
+            text-align: center;
+        }
+
+        [class*="col-"]:before {
+            display: block;
+            position: relative;
+            margin-bottom: 8px;
+            font-family: sans-serif;
+            font-size: 10px;
+            letter-spacing: 1px;
+            color: #658600;
+            text-align: left;
+        }
+
+        .item {
+            width: 100%;
+            height: 100%;
+            border: 1px solid #cecece;
+            padding: 16px 8px;
+            background: #ededed;
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f4f4f4), color-stop(100%, #ededed));
+            background: -moz-linear-gradient(top, #f4f4f4 0%, #ededed 100%);
+            background: -ms-linear-gradient(top, #f4f4f4 0%, #ededed 100%);
+        }
+        /* content styles */
+
+        .item {
+            display: table;
+        }
+
+        .content {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        .content:before {
+            content: "Content";
+            font-family: sans-serif;
+            font-size: 12px;
+            letter-spacing: 1px;
+            color: #747474;
+        }
+        /* centering styles for jsbin */
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        html {
+            display: table;
+        }
+
+        body {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        button {
+          font-family: 'Lato', sans-serif;
+            margin-bottom: 10px;
+            background: rgba(0, 0, 0, 0.3);
+                font-shadow: 2px 2px #0000FF;
+            border: none;
+            outline: none;
+            padding: 10px;
+            font-size: 33px;
+            color: #fff;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(0, 0, 0, 0.3);
+            border-radius: 4px;
+            box-shadow: inset 0 -5px 45px rgba(100, 100, 100, 0.2), 0 1px 1px rgba(255, 255, 255, 0.2);
+            -webkit-transition: box-shadow .5s ease;
+            -moz-transition: box-shadow .5s ease;
+            -o-transition: box-shadow .5s ease;
+            -ms-transition: box-shadow .5s ease;
+            transition: box-shadow .5s ease;
+
+
+
+            !font-size: 0em;
+            max-height: 400px;
+            max-width: 500px;
+            position: relative;
+            text-transform: uppercase;
+            font-weight: bolder;
+            -webkit-border-radius: 4px;
+            border-radius: 4px;
+            text-align: center;
+            padding: 1em 2em;
+            @media (max-width: 600px) {
+                padding: 1.5em 2.5em;
+                font-size: 3em;
+            }
+
+        }
+        /*
+            border: none;
+            outline: none;
+            !background-color: #40B0F9;
+            background: rgba(0, 0, 0, 0.3)
+            letter-spacing: 1px;
+            color: white;
+            text-transform: uppercase;
+            font-weight: normal;
+            width: 70%;
+            max-width: 500px;
+            position: relative;
+            -webkit-border-radius: 4px;
+            border-radius: 4px;
+            font-size: 1.4em;
+            text-align: left;
+            padding: 2em 5.5em;
+            @media (max-width: 600px) {
+                padding: 1.5em 2.5em;
+                font-size: 1em;
+            }
+            */
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &:after {
+            position: absolute;
+            content: "";
+            top: 0;
+            bottom: 0;
+            right: 0;
+            width: 20%;
+            background-color: #53bafd;
+            transition: width 0.7s;
+            @media (max-width: 600px) {
+                width: 30%;
+            }
+        }
+    }
+    button:hover:after {
+        transition: width 0.7s;
+        width: 140px;
+        cursor: pointer;
+        @media (max-width: 600px) {
+            width: 120px;
+        }
+    }
+    .caa{
+
+
+      box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid rgba(81, 203, 238, 1);
+    }
+    </style>
+</head>
+
+<body>
+    <img src="img/mainindex.jpg" class="bg">
+    <div class="container">
+        <div class="row row-centered">
+            <div class="col-xs-6">
+                <section onclick="callthis()">
+                    <button class="ca">Candidate</button>
+                </section>
+
+
+            </div>
+            <div class="col-xs-6">
+                <section onclick="callthisr()">
+                    <button>Recruiter</button>
+                </section>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        function callthis() {
+            window.location.assign("login.php?type=candidate");
+
+        }
+
+        function callthisr() {
+            window.location.assign("login.php?type=recruiter");
+
+        }
+    </script>
+</body>
+
+</html>
